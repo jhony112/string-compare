@@ -1,37 +1,31 @@
-# NPM Module Boilerplate
+# String Comparator
 
 
-**Start developing your NPM module in seconds** ✨
+**Simple string comparison using multiple algorithms** ✨
 
-Readymade boilerplate setup with all the best practices to kick start your npm/node module development.
-
-Happy hacking =)
-
-# Features
-
-* **ES6/ESNext** - Write _ES6_ code and _Babel_ will transpile it to ES5 for backwards compatibility
-* **Test** - _Mocha_ with _Istanbul_ coverage
-* **Lint** - Preconfigured _ESlint_ with _Airbnb_ config
-* **CI** - _TravisCI_ configuration setup
-* **Minify** - Built code will be minified for performance
-
-# Commands
-- `npm run clean` - Remove `lib/` directory
-- `npm test` - Run tests with linting and coverage results.
-- `npm test:only` - Run tests without linting or coverage.
-- `npm test:watch` - You can even re-run tests on file changes!
-- `npm test:prod` - Run tests with minified code.
-- `npm run test:examples` - Test written examples on pure JS for better understanding module usage.
-- `npm run lint` - Run ESlint with airbnb-config
-- `npm run cover` - Get coverage report for your code.
-- `npm run build` - Babel will transpile ES6 => ES5 and minify the code.
-- `npm run prepublish` - Hook for npm. Do all the checks before publishing your module.
+Just another plugin to tell the degree of closeness of two strings using
+ Jaro-Winkler Algorithm, Cosine Similarity and Levenshtein Algorithm
 
 # Installation
-Just clone this repo and remove `.git` folder.
+ `npm i string-comparator `
+
+# Methods
+- `jaro(a,b)` - Search string using Jaro-Winkler Algorithm (0-100)%
+- `cosine(a,b)` - Search string using Cosine Similarity (true/false)
+- `levenshtein(a,b)` - Search string using Levenshtein Algorithm (0-100)%
+
+# Examples
+```
+let stringCompare = require('string-comparator')
+let matchPercentage = stringCompare.jaro("foo","bar")
+let matchPercentage2 = stringCompare.levenshtein("foo","bar")
+let isMatch = stringCompare.cosine("foo","bar")
+
+```
+
 
 
 # License
 
-MIT © Dinesh Pandiyan
-# string-compare
+MIT © Jhony112
+# string-comparator
