@@ -20,9 +20,7 @@ let stringCompare = require('string-comparator')
 let matchPercentage = stringCompare.jaro("foo","bar")
 let matchPercentage2 = stringCompare.levenshtein("foo","bar")
 let isMatch = stringCompare.cosine("foo","bar")
-
 ```
-
 
 
 # License
